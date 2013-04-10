@@ -34,17 +34,17 @@
     $gzObject->write($users);
 
     $time = microtime(true) - $start;
-    $content .=  $count.' lines in '.$time.'(s) for '.($count/$time).' lines/s<br />';
+    $status =  $count.' lines in '.$time.'(s) for '.($count/$time).' lines/s<br />';
     $users->orderByHits();
 
     foreach ($users->getUsers() as $user){
-        $content .=  '<a href title="'.$user->get('userAgent').'">'.$user->get('ipAddress').'</a>
+        $clients .=  '<a href title="'.$user->get('userAgent').'">'.$user->get('ipAddress').'</a>
         ';
-        $content .=  ' (<a href="" title="">'. $user->countRequests().'
+        $clients .=  ' (<a href="" title="">'. $user->countRequests().'
         <div class="paths">'.implode("\n<br />",$user->getRequests()).'</div>
         </a>)<br />
         ';
     }
-    echo $twig->render('watcher.twig', array('content' => $content));
+    echo $twig->render('watcher.twig', array('clients' => $clients, 'status' => $status));
 
 ?>

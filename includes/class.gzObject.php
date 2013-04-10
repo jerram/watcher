@@ -11,7 +11,7 @@ class gzObject {
     }
 
     function write($object){
-        $gz = gzopen('logs-'.time().'.json.gz','w9');
+        $gz = gzopen('download/logs-'.time().'.json.gz','w9');
         gzwrite($gz, json_encode($object));
         gzclose($gz);
     }

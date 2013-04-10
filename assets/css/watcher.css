@@ -67,3 +67,17 @@
         border-right: 0;
         border-radius: 0 3px 3px 0;
       }
+    .paths {
+        display: none;
+        border:1px solid grey;
+        position:absolute;
+        top:200px;
+        width:50%;
+        margin:0 300px;
+    }
+
+    a:hover .paths {
+        display: block;
+        bacground-color:#efefef;
+        padding:7px;
+    }

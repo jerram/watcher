@@ -28,7 +28,7 @@
             <div class="container">
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Pages</a></li>
+                <li><a href="#">Requests</a></li>
                 <li><a href="#">Clients</a></li>
                 <li><a href="#">Downloads</a></li>
                 <li><a href="#">Roadmap</a></li>
@@ -42,53 +42,15 @@
       <!-- Example row of columns -->
       <div class="row-fluid">
         <div class="span4">
-          <h2>Pages</h2>
+          <h2>requests</h2>
           <p><a class="btn" href="#">View details &raquo;</a></p>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
         </div>
         <div class="span4">
           <h2>Clients</h2>
           <p><a class="btn" href="#">View details &raquo;</a></p>
-        <pre>
-
-66.249.73.185 (13 )
-108.50.16.219 (12 )
-190.53.163.233 (9 )
-98.194.198.93 (7 )
-173.29.235.19 (6 )
-97.73.64.154 (6 )
-64.180.83.143 (6 )
-91.207.6.34 (6 )
-92.39.195.105 (5 )
-91.207.4.186 (4 )
-74.82.68.160 (4 )
-94.174.227.154 (4 )
-100.43.83.159 (3 )
-49.176.72.160 (3 )
-83.165.43.176 (3 )
-46.118.119.252 (3 )
-94.153.64.11 (3 )
-118.209.169.54 (3 )
-157.55.33.22 (2 )
-94.23.42.135 (2 )
-204.12.226.2 (2 )
-91.207.9.226 (2 )
-74.103.61.63 (2 )
-193.106.136.55 (2 )
-37.139.52.23 (2 )
-173.199.114.243 (2 )
-221.194.146.102 (2 )
-157.55.34.179 (1 )
-68.5.237.180 (1 )
-1.202.218.99 (1 )
-1.202.218.91 (1 )
-1.202.218.97 (1 )
-1.202.218.94 (1 )
-174.231.8.106 (1 )
-182.118.25.204 (1 )
-157.55.32.154 (1 )
-        </pre>
-       </div>
+{{ content|raw }}
+        </div>
         <div class="span4">
           <h2>Server</h2>
           <p><a class="btn" href="#">View details &raquo;</a></p>
@@ -97,6 +59,50 @@
       </div>
 
       <hr>
+    <h2>Aims</h2>
+    <ul>
+        <li>See where requests are being generated</li>
+        <li>See what is being hit</li>
+        <li>zoom in on ip</li>
+        <li>realtime</li>
+    </ul>
+
+    <h2>Tasks</h2>
+    <ul>
+        <li><strike>remove image, css and js files from request list</strike></li>
+        <li>twig templating</li>
+        <li>show top paths</li>
+        <li>show current log info</li>
+        <li>read vhosts or a submitted file to match logs to domain</li>
+        <li>Add some bootstrap</li>
+        <li><strike>split demo into files and templates</strike></li>
+        <li>show date / time range of results</li>
+        <li>click ip to see details</li>
+        <li>tail logs and refresh with ajax</li>
+        <li>json and memcache or sql result sets</li>
+        <li>export results</li>
+        <li>force https</li>
+        <li>block ip</li>
+        <li>unzip logs</li>
+        <li>show refferer</li>
+        <li>read and show errors</li>
+        <li>replay</a>
+        <li>requests/s total by ip and url</a>
+        <li>top burst request/s</li>
+        <li>show heavy pages (by number of images / css etc)</li>
+        <li>small panal for info on apache chlidren, mysql requests/s, memory, disk etc</li>
+        <li>small panal for info on php version and settings like memory</li>
+        <li>charts</li>
+        <li>nginx support</li>
+        <li>unit test each section</li>
+        <li>speed test each section</li>
+    </ul>
+
+    <h2>Details</h2>
+    <ul>
+        <li>link to url</a>
+        <li>location, whois on ip</a>
+    </ul>
 
       <div class="footer">
         <p>&copy; Company 2013</p>
