@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Template &middot; Bootstrap</title>
+    <title>Watcher - server activity visibility tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -16,9 +16,7 @@
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
-
   </head>
-
   <body>
     <div class="container">
       <div class="masthead">
@@ -38,7 +36,7 @@
           </div>
         </div><!-- /.navbar -->
       </div>
-{{ status|raw }}
+    {{ status|raw }}
       <!-- Example row of columns -->
       <div class="row-fluid">
         <div class="span4">
@@ -49,7 +47,7 @@
         <div class="span4">
           <h2>Clients</h2>
           <p><a class="btn" href="#">View details &raquo;</a></p>
-{{ clients|raw }}
+    {{ clients|raw }}
         </div>
         <div class="span4">
           <h2>Server</h2>
@@ -59,7 +57,7 @@
       </div>
 
       <hr>
-{% include 'roadmap.twig' %}
+    {% include 'roadmap.twig' %}
       <div class="footer">
         <p>&copy; Company 2013</p>
       </div>
@@ -82,6 +80,5 @@
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
     <script src="assets/js/bootstrap-typeahead.js"></script>
-
   </body>
 </html>

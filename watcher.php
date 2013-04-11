@@ -5,6 +5,10 @@
     require_once 'includes/class.user.php';
     require_once 'includes/class.users.php';
     require_once 'vendor/autoload.php';
+
+    $clients = '';
+    $count = 0;
+
     $loader = new Twig_Loader_Filesystem('templates');
     $twig = new Twig_Environment($loader, array(
         //'cache' => 'compilation_cache',
@@ -26,6 +30,7 @@
         elseif($match === 0){
             $request = new Request($line);
             $users->addRequest($request);
+     //       $pages->addpage($request);
         }
         $count++;
     }
@@ -34,7 +39,7 @@
     $gzObject->write($users);
 
     $time = microtime(true) - $start;
-    $status =  $count.' lines in '.$time.'(s) for '.($count/$time).' lines/s<br />';
+    $status =  $count.' lines in '.round($time,3).'(s) for '.round($count/$time).' lines/s<br />';
     $users->orderByHits();
 
     foreach ($users->getUsers() as $user){

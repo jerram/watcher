@@ -29,7 +29,7 @@ class Users {
             $user = $this->addUser($request->hash);
             $user->addRequest($request);
         }
-        $this->stats->referrer[$request->referrer]++;
+        //$this->stats->referrer[$request->referrer]++;
     }
 
     function orderByHits(){
