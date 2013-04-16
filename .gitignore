@@ -1,3 +1,5 @@
 /logs
 /vendor
 /working-files
+/download
+/compilation_cache
